@@ -8,7 +8,7 @@ public class MainApp {
 	public static void main(String[] args) {
 			
 		Gardener gardener = new Gardener("John");
-		Flower fl = new Flower("Rose", "White");
+		Flower fl = new Flower("Rose", "white");
 		gardener.informAboutFlowerState(fl);
 		
 		fl.bloom(5);

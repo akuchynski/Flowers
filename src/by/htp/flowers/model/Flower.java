@@ -4,9 +4,9 @@ public class Flower {
 
 	public String title;
 	public String color;
-	public Petal[] petal;
+//	public Petal[] petal; ---> in Bud.java
 	
-	Bud bud = new Bud(10, "white");
+ 	Bud bud = new Bud(10, "white");
 	
 	public Flower() {
 
@@ -25,10 +25,10 @@ public class Flower {
 		bud.size = 20;
 		
 		if (petalCount > 0) {
-			petal = new Petal[petalCount];
+			bud.petal = new Petal[petalCount];
 
 			for (int i = 0; i < petalCount; i++) {
-				petal[i] = new Petal(4, "oval", "white");
+				bud.petal[i] = new Petal(4, "oval", "white");
 			}
 			System.out.println();
 		}
@@ -37,8 +37,8 @@ public class Flower {
 	public void litleFade() {
 		
 		this.color = "brown";
-		for (int i = 0; i < this.petal.length; i += 3) {
-			this.petal[i] = null;
+		for (int i = 0; i < this.bud.petal.length; i += 3) {
+			this.bud.petal[i] = null;
 		}
 		
 		bud.color = this.color;
@@ -48,9 +48,9 @@ public class Flower {
 	public void totalFade() {
 		
 		this.color = "black";
-		for (int i = 0; i < this.petal.length; i++) {
-			if (this.petal[i] != null)
-				this.petal[i] = null;
+		for (int i = 0; i < this.bud.petal.length; i++) {
+			if (this.bud.petal[i] != null)
+				this.bud.petal[i] = null;
 		}
 		
 		bud.color = this.color;

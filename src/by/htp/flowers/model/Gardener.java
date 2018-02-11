@@ -17,8 +17,8 @@ public class Gardener {
 			System.out.println("Bud size: " + flower.bud.size);
 			System.out.println("Bud color: " + flower.bud.color);
 
-			if (flower.petal != null) {
-				this.informAboutFlowerPetals(flower.petal);
+			if (flower.bud.petal != null) {
+				this.informAboutFlowerPetals(flower.bud.petal);
 			}
 		}
 	}
